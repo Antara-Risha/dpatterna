@@ -1,4 +1,5 @@
-import {ButterscotchConeCart,StrawberryStickCart,ChocoCupCart,ChocoStickCart, ButterscotchStickCart,StrawberryConeCart, ChocolateConeCart } from "../patterns/factory/abstract-factory-icecream";
+import {ButterscotchConeCart,StrawberryStickCart,ChocoCupCart,ChocoStickCart,
+     ButterscotchStickCart,StrawberryConeCart, ChocolateConeCart, ButterscotchCupCart,StrawberryCupCart } from "../patterns/factory/abstract-factory-icecream";
 import {getIcecream} from "../pages/hello-abstract-factory/prouct-provider"
 describe("Icecream Abstract Factory", () => {
     test('Strawberry Ice cream with stick',()=>{
@@ -41,6 +42,16 @@ describe("Icecream Abstract Factory", () => {
     test('Choco Ice cream with cup',()=>{
         let expectation =getIcecream('Choco Blast','Cup')
         let reality = new ChocoCupCart()
+        expect(expectation).toEqual(reality.getIcecream())
+    })
+    test('Butterscotch Ice cream with cup',()=>{
+        let expectation =getIcecream('Butterscotch','Cup')
+        let reality = new  ButterscotchCupCart()
+        expect(expectation).toEqual(reality.getIcecream())
+    })
+    test('Steawberry Ice cream with cup',()=>{
+        let expectation =getIcecream('Strawberry','Cup')
+        let reality = new StrawberryCupCart()
         expect(expectation).toEqual(reality.getIcecream())
     })
 
