@@ -1,5 +1,6 @@
 import {ButterscotchConeCart,StrawberryStickCart,ChocoCupCart,ChocoStickCart,
-     ButterscotchStickCart,StrawberryConeCart, ChocolateConeCart, ButterscotchCupCart,StrawberryCupCart } from "../patterns/factory/abstract-factory-icecream";
+     ButterscotchStickCart,StrawberryConeCart, ChocolateConeCart, 
+     ButterscotchCupCart,StrawberryCupCart } from "../patterns/factory/abstract-factory-icecream";
 import {getIcecream} from "../pages/hello-abstract-factory/prouct-provider"
 describe("Icecream Abstract Factory", () => {
     test('Strawberry Ice cream with stick',()=>{
